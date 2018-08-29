@@ -37,16 +37,16 @@ def shopping_cart():
             # 输出商品列表
             print("\033[1;34m Balance: [%s] \033[0m" % salary)
             print("\033[1;36m---------Product List:---------\033[0m")
-            for index, value in enumerate(product_list):
-                print("{i}. {name}: {price}".format(i=index + 1, name=value[0], price=value[1]))
+            for index, value in enumerate(product_list, start=1):
+                print("{i}. {name}: {price}".format(i=index, name=value[0], price=value[1]))
 
             number = input("\033[1;32m Input number of the product you want: \033[0m")
             if number == 'exit' or int(salary) == 0:
                 if len(cart) > 0:
                     print("\033[1;34m Balance: [%s] \033[0m" % salary)
                     print("\033[1;34m Product purchased: \033[0m")
-                    for index, value in enumerate(cart):
-                        print("{i}. {name}: {price}".format(i=index + 1, name=value[0], price=value[1]))
+                    for index, value in enumerate(cart, start=1):
+                        print("{i}. {name}: {price}".format(i=index, name=value[0], price=value[1]))
                     return
                 else:
                     print("\033[1;32m Nothing purchased. \033[0m")
