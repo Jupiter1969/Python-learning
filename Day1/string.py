@@ -18,9 +18,32 @@ print(string1.replace('pa','tb'))
 
 #字符串长度
 print(len(string1))
-'''
+
 
 str1 = "\"asfd \"afdad"
 
 print(str1)
+'''
+
+
+
+print("my\tname".expandtabs(tabsize=30))
+
+print("{i}. {name}: {price}".format_map({"i":1,"name":"jupiter","price":50}))
+
+print("as11".isalpha())
+print("as11".isdecimal())
+print("as11".isdigit())
+print("as11".isidentifier())
+print("s11".islower())
+print("as11".isnumeric())
+print("as11".isprintable())
+print("aaa".isidentifier())
+print("+".join(["1", "2", "3"]))
+
+rule = str.maketrans("abcdef", "@#^&*(")
+print(str.translate("jupiter", rule))
+print("jupiteer".replace("e", "E", 1))
+
+print("adf\r\bad".splitlines())
 
